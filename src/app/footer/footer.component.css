@@ -1,0 +1,67 @@
+.card{
+    border-radius: 20px;
+    max-height: auto;
+}
+
+.effect{
+    height: 101%;
+    width: 101%;
+    position: absolute;
+    top: -.5%;
+    left: -.5%;
+    background-color: #001e3cc2;
+    opacity: 0;
+    border-radius: 20px;
+    transition: opacity .5s;
+}
+
+.br-top{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.social{
+    position: absolute;
+    top: 5%;
+    left: 43%;
+}
+
+.w-30{
+    width: 20%;
+}
+
+.social-logo{
+    transform: translateX(100px);
+    width: 100%;
+    opacity: 0;
+}
+
+.social-link{
+    transition: all 0.5s;
+}
+
+
+.social-link:hover{
+    transform: scale(1.1);
+}  
+
+.profile-card:hover .transition-delay-0s{
+    transition: all 1s 0s;
+}
+.profile-card:hover .transition-delay-05s{
+    transition: all 1s .5s;
+    
+}
+.profile-card:hover .transition-delay-1s{
+    transition: all 1s 1s;
+    
+}
+
+.profile-card:hover .effect{
+    opacity: 100%;
+}
+
+.profile-card:hover .social-logo{
+    opacity: 100%;
+    transform: translateX(0);
+}
