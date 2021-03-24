@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { environment } from './../../environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  nome = environment.nome;
+  foto = environment.foto;
 
-  ngOnInit(): void {
+  constructor(
+    private router: Router
+  ) { }
+
+  ngOnInit(){
+  }
+
+  sair(){
+    environment.foto = '';
+    environment.nome = '';
+    environment.token = '';
+    environment.id = 0;
+
+    this.router.navigate(["/login"])
   }
 
 }

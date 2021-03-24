@@ -6,10 +6,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav d-flex align-items-center mr-auto">
             <li class="nav-item">
-                <img src="../../assets/img/profile-picture.jpg" alt="" width="50px" height="50px" class="img-fluid rounded-circle">
+                <img src="{{foto}}]" alt="" width="50px" height="50px" class="img-fluid rounded-circle">
             </li>
             <li class="nav-item">
-                <p class="text-white font-weight-bold m-0 p-2">Nome do usuário</p>
+                <p class="text-white font-weight-bold m-0 p-2">Olá, {{nome}}</p>
             </li>
             <li class="nav-item">
                 <a href="#">
@@ -19,7 +19,7 @@
         </ul>
         <ul class="navbar-nav d-flex align-items-center ml-auto">
             <li class="nav-item">
-                <a href="#"><p class="text-white m-0">Sair</p></a>
+                <a (click)="sair()" href=""><p class="text-white m-0">Sair</p></a>
             </li>
         </ul>
     </div>

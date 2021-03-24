@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { environment } from './../../environments/environment.prod';
 
@@ -10,9 +11,14 @@ export class InicioComponent implements OnInit {
 
   public nome: string = environment.nome;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    if(environment.token == ''){
+      this.router.navigate(["/login"])
+    }
   }
 
 }

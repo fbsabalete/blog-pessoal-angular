@@ -1,22 +1,71 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Bem vindo, {{ nome }}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
+<div class="container-fluid">
+  <div class="row bg-secondary align-items-center">
+    <div class="col-md-6 d-flex justify-content-center">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10 text-white">
+          <h2 class="fs-54">Seja bem vindo(a)!</h2>
+          <h5 class="fs-18">expresse aqui seus pensamentos e opiniões!</h5>
+          <div class="mt-3">
+            <button class="btn btn-light mr-2" data-toggle="modal" data-target="#modalPostagem">Nova postagem</button>
+            <a class="btn btn-outline-light" href="#postagens">Ver postagens</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex justify-content-center">
+      <img src="https://imgur.com/Imq378e.png" alt="" width="500px" height="500px">
+    </div>
   </div>
-</nav>
+</div>
+
+
+<div class="container" id="postagens">
+  <nav>
+    <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+      <a class="nav-link active text-secondary font-weight-bold" id="todas-postagens-tab" data-toggle="tab" href="#todas-postagens" role="tab" aria-controls="todas-postagens" aria-selected="true">Todas as postagens</a>
+      <a class="nav-link text-secondary font-weight-bold" id="minhas-postagens-tab" data-toggle="tab" href="#minhas-postagens" role="tab" aria-controls="minhas-postagens" aria-selected="false">Minhas postagens</a>
+      <a class="nav-link text-secondary font-weight-bold" id="postagens-tema-tab" data-toggle="tab" href="#postagens-tema" role="tab" aria-controls="postagens-tema" aria-selected="false">Postagens por tema</a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="todas-postagens" role="tabpanel" aria-labelledby="todas-postagens-tab">...</div>
+    <div class="tab-pane fade" id="minhas-postagens" role="tabpanel" aria-labelledby="minhas-postagens-tab">...</div>
+    <div class="tab-pane fade" id="postagens-tema" role="tabpanel" aria-labelledby="postagens-tema-tab">...</div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalPostagem" tabindex="-1" aria-labelledby="modalPostagemLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Nova Postagem</h5>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input type="text" class="form-control" id="titulo" placeholder="Digite o título">
+          </div>
+          <div class="form-group">
+            <label for="texto">Texto</label>
+            <textarea name="texto" class="form-control" rows="3" id="texto"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="tema">Escolha um tema ou <a>cadastre um novo</a>:</label>
+            <select name="tema" class="form-control" id="tema">
+              <option value=""></option>
+            </select>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
