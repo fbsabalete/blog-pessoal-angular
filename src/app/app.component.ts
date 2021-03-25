@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { environment } from './../environments/environment.prod';
 import { AuthService } from './service/auth.service';
 import { Component } from '@angular/core';
 
@@ -9,6 +11,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   constructor(
-    public auth: AuthService
+    public auth: AuthService,
+    private router: Router
   ) { }
+
+  ngOnInit(){
+    if(environment.token == ''){
+      this.router.navigate(["/login"])
+    }
+  }
 }

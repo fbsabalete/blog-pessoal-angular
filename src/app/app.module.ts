@@ -11,6 +11,7 @@ import { SignupComponent } from './signup/signup.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
+import { TemaComponent } from './tema/tema.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InicioComponent } from './inicio/inicio.component';
     FooterComponent,
     LoginComponent,
     SignupComponent,
-    InicioComponent
+    InicioComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,
